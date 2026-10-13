@@ -1,0 +1,15 @@
+{
+	"required": true,
+	"package": "net.hmioutline.mixin",
+	"compatibilityLevel": "JAVA_21",
+	"minVersion": "0.8.5",
+	"client": [
+		"GameRendererMixin",
+		"ItemRendererMixin",
+		"ArmorFeatureRendererMixin",
+		"BuiltinModelItemRendererMixin"
+	],
+	"injectors": {
+		"defaultRequire": 1
+	}
+}

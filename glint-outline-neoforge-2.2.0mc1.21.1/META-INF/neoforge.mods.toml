@@ -1,0 +1,51 @@
+modLoader = "javafml"
+loaderVersion = "[4,)"
+license = "CC0-1.0"
+
+[[mods]]
+modId = "hmioutline"
+version = "2.2.0+mc1.21.1"
+displayName = "Glint Outline"
+authors = "timkurs"
+logoFile = "assets/hmioutline/icon.png"
+displayTest = "IGNORE_ALL_VERSION"
+description = '''
+Configurable outline around enchanted items and armor, in place of the vanilla glint. Covers the item in your hand (first and third person), the trident and shield, and worn armor. Client-side only.
+'''
+
+[[mixins]]
+config = "hmioutline.mixins.json"
+
+[[dependencies.hmioutline]]
+modId = "neoforge"
+type = "required"
+versionRange = "[21.1.0,)"
+ordering = "NONE"
+side = "CLIENT"
+
+[[dependencies.hmioutline]]
+modId = "minecraft"
+type = "required"
+versionRange = "[1.21.1,1.21.2)"
+ordering = "NONE"
+side = "CLIENT"
+
+[[dependencies.hmioutline]]
+modId = "yet_another_config_lib_v3"
+type = "optional"
+versionRange = "[3.6,)"
+ordering = "NONE"
+side = "CLIENT"
+
+[[dependencies.hmioutline]]
+modId = "lambdynlights_runtime"
+type = "optional"
+versionRange = "[4.8,)"
+ordering = "NONE"
+side = "CLIENT"
+
+# LambDynamicLights finds other mods' initializers through Yumi's entrypoints,
+# which on NeoForge are read from here. Without that mod nothing reads this
+# entry, so the compat class is never loaded.
+[[modproperties.hmioutline."yumi:entrypoints"."lambdynlights:initializer"]]
+value = "net.hmioutline.compat.LambDynLightsCompat"

@@ -1,0 +1,23 @@
+{
+  "vertex": "hmioutline:glow_fullscreen",
+  "fragment": "hmioutline:glow_composite",
+  "samplers": [
+    {
+      "name": "Sampler0"
+    },
+    {
+      "name": "Sampler1"
+    }
+  ],
+  "uniforms": [
+    {
+      "name": "Weights",
+      "type": "float",
+      "count": 2,
+      "values": [
+        1.0,
+        1.0
+      ]
+    }
+  ]
+}
